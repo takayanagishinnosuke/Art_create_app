@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{{ post['title'] }}"{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <div>
+    <label for="title">{{post['title']}}</label>
+    
+    <div>
+      <img src="../.{{ post['filepath1'] }}" width="600px" height="500px">
+    </div>
+
+    <div>
+      <img src="../../{{ post['filepath2'] }}" width="600px" height="500px">
+    </div>
+
+    <div>
+      <img src="../../{{ post['filepath3'] }}" width="600px" height="500px">
+    </div>
+
+    <div>
+      <img src="../../{{ post['filepath4'] }}" width="600px" height="500px">
+    </div>
+
+  </div>
+  <hr>
+
+  <form action="{{ url_for('blog.delete', id=post['id']) }}" method="post">
+    <input class="danger" type="submit" value="削除" onclick="return confirm('本当に削除しますか?');">
+  </form>
+
+  <div class="return">
+    <a href="/">
+      <input type="submit" value="戻る">
+    <a>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,3 @@
+flaskr/static/image/
+.env
+flaskr/__pycache__/
