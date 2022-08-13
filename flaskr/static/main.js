@@ -13,3 +13,8 @@ input.addEventListener('change', function(e){
 
   reader.readAsDataURL(file)
 })
+
+function loading(){
+  $("#loading").show();
+  $("#content").hide();       
+}

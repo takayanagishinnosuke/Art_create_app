@@ -9,7 +9,7 @@
     <label for="title">{{post['title']}}</label>
     
     <div>
-      <img src="../.{{ post['filepath1'] }}" width="600px" height="500px">
+      <img src="../../{{ post['filepath1'] }}" width="600px" height="500px">
     </div>
 
     <div>
@@ -28,7 +28,7 @@
   <hr>
 
   <form action="{{ url_for('blog.delete', id=post['id']) }}" method="post">
-    <input class="danger" type="submit" value="削除" onclick="return confirm('本当に削除しますか?');">
+    <input class="danger" type="submit" value="全削除" onclick="return confirm('本当に削除しますか?');">
   </form>
 
   <div class="return">

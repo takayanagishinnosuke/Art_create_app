@@ -5,7 +5,7 @@ html{
    }
 
 body{
-   max-width: 960px; 
+   max-width: 1080px; 
    margin: 0 auto; 
    background: white; 
   }
@@ -135,4 +135,18 @@ input[type=submit] {
  height: 250px;
  object-fit: scale-down;
  background-color: #ffffff; 
+}
+
+#loading {
+  width: 100%;
+  height: 500px;
+  display: none;
+  background: url(../static/img/road.gif) no-repeat;
+  background-size: 30%;
+  background-position: center;
+  cursor: wait;
+  }
+#loading_span{
+  text-align: center;
+  margin-top: 3%;
 }

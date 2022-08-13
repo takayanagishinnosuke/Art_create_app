@@ -5,10 +5,15 @@
 {% endblock %}
 
 {% block content %}
-  <form method="post" enctype="multipart/form-data">
-    <label for="title">タイトル</label>
-    <input name="title" id="title" value="{{ request.form['title'] }}" required>
+  <div id="loading">
+    <p id="loading_span">画像生成中</p>
+  </div>
+  <div id="content">
+    <form method="post" enctype="multipart/form-data">
+      <label for="title">タイトル</label>
+      <input name="title" id="title" value="{{ request.form['title'] }}" required>
 
-    <input type="submit" value="生成する">
-  </form>
+      <input type="submit" value="生成する" onClick="loading();">
+    </form>
+  </div>
 {% endblock %}
